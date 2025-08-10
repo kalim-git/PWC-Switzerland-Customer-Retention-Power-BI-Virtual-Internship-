@@ -35,15 +35,15 @@ The tabulation below shows the Customer retention table with its column names an
 | Partner | Describes if the customer has a partner |
 | Dependents |	Describes if the customer has a dependent |
 | tenure	| Describes how long as a customer |
-| PhoneService |	Describes if the customer has registered a phone service |
-| MultipleLines |	Describes if the customer has registered multiple lines |
-| InternetService	| Describes if the customer has registered for internet service |
-| OnlineSecurity	| Describes if the customer has registered for online security |
-| OnlineBackup |	Describes if the customer has registered for online backup |
-| DeviceProtection	| Describes if the customer has registered for device protection |
+| PhoneService |	If the customer has registered a phone service |
+| MultipleLines |	If the customer has registered multiple lines |
+| InternetService	| If the customer has registered for internet service |
+| OnlineSecurity	| If the customer has registered for online security |
+| OnlineBackup |	If the customer has registered for online backup |
+| DeviceProtection	| If the customer has registered for device protection |
 | TechSupport |	Describes if the customer has registered for tech support |
-| StreamingTV	| Describes if the customer has registered to stream tv |
-| StreamingMovies |	Describes if the customer has registered to stream movies |
+| StreamingTV	| If the customer has registered to stream tv |
+| StreamingMovies |	If the customer has registered to stream movies |
 | Contract |	Describes if the length of the contract of the customer |
 | PaperlessBilling |	Describes if the customer has registered for paperless billing |
 | PaymentMethod |	Describes the payment method of the customer |
@@ -56,8 +56,11 @@ The tabulation below shows the Customer retention table with its column names an
 
 
 ## Data Transformation
-The Customer churn dataset has 23 columns and 7043 rows of observation
+The Customer churn dataset has 23 columns and 7043 rows of observation.
 Data transformation and cleaning were done in Power Query and the dataset was loaded into Microsoft Power BI Desktop for modelling.
+In the new table, one additional conditional column was added called "Year" :
+- Year = `Table.AddColumn(#"Changed Type", "# Year", each if [tenure] < 12 then "< 1 year" else if [tenure] < 24 then "< 2 years" else if [tenure] < 36 then "< 3 years" else if [tenure] < 48 then "< 4 years" else if [tenure] < 60 then "< 5 years" else "< 6 years")`
+
 
 ## Data Visualization
 Data visualization for the dataset was done in Microsoft Power BI Desktop.
