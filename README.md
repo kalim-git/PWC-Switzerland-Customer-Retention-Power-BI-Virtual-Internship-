@@ -75,31 +75,37 @@ In the new table, one additional conditional column was added called "Year" :
 - Year = `Table.AddColumn(#"Changed Type", "# Year", each if [tenure] < 12 then "< 1 year" else if [tenure] < 24 then "< 2 years" else if [tenure] < 36 then "< 3 years" else if [tenure] < 48 then "< 4 years" else if    [tenure] < 60 then "< 5 years" else "< 6 years")`
 
 
-## Data Visualization 
+## Data Visualization (Dashboard)
 Data visualization for the dataset was done in Microsoft Power BI Desktop.
+**Welcome Page**
+<img width="1277" height="718" alt="1 Welcome" src="https://github.com/user-attachments/assets/449f9c83-4a0d-4e5c-892d-e89dfcb0015d" />
 
+**Churn Dashboard**
+<img width="1283" height="713" alt="2 Churn" src="https://github.com/user-attachments/assets/4cd876d1-d421-4a50-a96d-fad9c881629f" />
 
-## Dashboard
-**Customer Retention Dashboard**
+**Risk Analysis**
+<img width="1282" height="718" alt="3 Risk Analysis" src="https://github.com/user-attachments/assets/2cd9d237-6a26-456e-81df-7b22491fbe07" />
 
+**Services**
+<img width="1278" height="715" alt="4 Services" src="https://github.com/user-attachments/assets/3477019e-af40-4801-9c77-e9ba0887bf24" />
 
 ## Data Analysis
 **Measures(DAX) used**
 - Average Monthly Charges = `CALCULATE(AVERAGE('Churn-Dataset'[MonthlyCharges]),'Churn-Dataset'[Churn]="Yes")`
 - Average Total Charges = `CALCULATE(AVERAGE('Churn-Dataset'[TotalCharges]),'Churn-Dataset'[Churn]="Yes")`
-- Churn Rate% = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[Churn]),'Churn-Dataset'[Churn]="Yes"),COUNT('Churn-Dataset'[Churn]),0)`
+- Churn Rate % = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[Churn]),'Churn-Dataset'[Churn]="Yes"),COUNT('Churn-Dataset'[Churn]),0)`
 - Customers Churn = `CALCULATE(COUNT('Churn-Dataset'[customerID]),'Churn-Dataset'[Churn]="Yes")`
 - Customers Retained = `CALCULATE(COUNT('Churn-Dataset'[customerID]),'Churn-Dataset'[Churn]="No")`
-- % Dependents = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[Dependents]),'Churn-Dataset'[Dependents]="Yes",'Churn-Dataset'[Churn]="Yes"), CALCULATE(COUNT('Churn-Dataset'[Dependents]), 'Churn-Dataset'[Churn]="Yes"), 0)`
-- % Device Protection = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[DeviceProtection]), 'Churn-Dataset'[DeviceProtection] ="Yes", 'Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('Churn-Dataset'[DeviceProtection]),'Churn-Dataset'[Churn]="Yes"),0)`
-- % Online Backup = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[OnlineBackup]), 'Churn-Dataset'[OnlineBackup] ="Yes", 'Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('Churn-Dataset'[OnlineBackup]),'Churn-Dataset'[Churn]="Yes"),0)`
-- % Online Security = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[OnlineSecurity]), 'Churn-Dataset'[OnlineSecurity] ="Yes", 'Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('Churn-Dataset'[OnlineSecurity]),'Churn-Dataset'[Churn]="Yes"),0)`
-- % Phone Service = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[PhoneService]), 'Churn-Dataset'[PhoneService] ="Yes", 'Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('Churn-Dataset'[PhoneService]),'Churn-Dataset'[Churn]="Yes"),0)`
-- % Partner = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[Partner]),'Churn-Dataset'[Partner]="Yes",'Churn-Dataset'[Churn]="Yes"), CALCULATE(COUNT('Churn-Dataset'[Partner]), 'Churn-Dataset'[Churn]="Yes"), 0)`
-- % Senior Citizen = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[SeniorCitizen]),'Churn-Dataset'[SeniorCitizen] = 1,'Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('Churn-Dataset'[SeniorCitizen]),'Churn-Dataset'[Churn]="Yes"),0)`
-- % Streaming Movies = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[StreamingMovies]), 'Churn-Dataset'[StreamingMovies] ="Yes", 'Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('Churn-Dataset'[StreamingMovies]),'Churn-Dataset'[Churn]="Yes"),0)`
-- % Streaming TV = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[StreamingTV]), 'Churn-Dataset'[StreamingTV] ="Yes", 'Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('Churn-Dataset'[StreamingTV]),'Churn-Dataset'[Churn]="Yes"),0)`
-- % Tech Support = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[TechSupport]), 'Churn-Dataset'[TechSupport] ="Yes", 'Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('Churn-Dataset'[TechSupport]),'Churn-Dataset'[Churn]="Yes"),0)`
+- Dependents % = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[Dependents]),'Churn-Dataset'[Dependents]="Yes",'Churn-Dataset'[Churn]="Yes"), CALCULATE(COUNT('Churn-Dataset'[Dependents]), 'Churn-Dataset'[Churn]="Yes"), 0)`
+- Device Protection % = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[DeviceProtection]), 'Churn-Dataset'[DeviceProtection] ="Yes", 'Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('Churn-Dataset'[DeviceProtection]),'Churn-Dataset'[Churn]="Yes"),0)`
+- Online Backup % = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[OnlineBackup]), 'Churn-Dataset'[OnlineBackup] ="Yes", 'Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('Churn-Dataset'[OnlineBackup]),'Churn-Dataset'[Churn]="Yes"),0)`
+- Online Security % = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[OnlineSecurity]), 'Churn-Dataset'[OnlineSecurity] ="Yes", 'Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('Churn-Dataset'[OnlineSecurity]),'Churn-Dataset'[Churn]="Yes"),0)`
+- Phone Service % = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[PhoneService]), 'Churn-Dataset'[PhoneService] ="Yes", 'Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('Churn-Dataset'[PhoneService]),'Churn-Dataset'[Churn]="Yes"),0)`
+- Partner % = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[Partner]),'Churn-Dataset'[Partner]="Yes",'Churn-Dataset'[Churn]="Yes"), CALCULATE(COUNT('Churn-Dataset'[Partner]), 'Churn-Dataset'[Churn]="Yes"), 0)`
+- Senior Citizen % = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[SeniorCitizen]),'Churn-Dataset'[SeniorCitizen] = 1,'Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('Churn-Dataset'[SeniorCitizen]),'Churn-Dataset'[Churn]="Yes"),0)`
+- Streaming Movies % = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[StreamingMovies]), 'Churn-Dataset'[StreamingMovies] ="Yes", 'Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('Churn-Dataset'[StreamingMovies]),'Churn-Dataset'[Churn]="Yes"),0)`
+- Streaming TV % = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[StreamingTV]), 'Churn-Dataset'[StreamingTV] ="Yes", 'Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('Churn-Dataset'[StreamingTV]),'Churn-Dataset'[Churn]="Yes"),0)`
+- Tech Support % = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[TechSupport]), 'Churn-Dataset'[TechSupport] ="Yes", 'Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('Churn-Dataset'[TechSupport]),'Churn-Dataset'[Churn]="Yes"),0)`
 
 ## Insights
 As shown by Data Visualization, It can be deduced that:
