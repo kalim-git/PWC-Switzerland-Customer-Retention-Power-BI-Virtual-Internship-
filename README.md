@@ -22,7 +22,7 @@ The tabulation below shows the Call center table with its column names and their
 | Satisfaction rating |	Represents the satisfaction rating of the agent during the call |
 
 ## Data Transformation
-The call center dataset is given by a table named "Call Center Dataset" which has 10 columns and 5000 rows of observation.
+The Customer churn dataset has 23 columns and 7043 rows of observation
 Data transformation and cleaning were done in Power Query and the dataset was loaded into Microsoft Power BI Desktop for modelling.
 
 ## Data Visualization
