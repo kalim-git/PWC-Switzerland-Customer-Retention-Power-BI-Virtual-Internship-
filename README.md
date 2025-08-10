@@ -77,6 +77,7 @@ In the new table, one additional conditional column was added called "Year" :
 
 ## Data Visualization (Dashboard)
 Data visualization for the dataset was done in Microsoft Power BI Desktop.
+- <a href="https://github.com/kalim-git/PWC-Switzerland-Customer-Retention-Power-BI-Virtual-Internship-/blob/main/Customer%20Churn%20Dashboard.pbix">Dashboard</a>
 
 **Welcome Page**
 <img width="1277" height="718" alt="1 Welcome" src="https://github.com/user-attachments/assets/449f9c83-4a0d-4e5c-892d-e89dfcb0015d" />
