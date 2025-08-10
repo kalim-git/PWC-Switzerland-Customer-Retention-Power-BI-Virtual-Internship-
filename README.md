@@ -91,7 +91,7 @@ Data visualization for the dataset was done in Microsoft Power BI Desktop.
 - Customers Churn = `CALCULATE(COUNT('Churn-Dataset'[customerID]),'Churn-Dataset'[Churn]="Yes")`
 - Customers Retained = `CALCULATE(COUNT('Churn-Dataset'[customerID]),'Churn-Dataset'[Churn]="No")`
 - % Dependents = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[Dependents]),'Churn-Dataset'[Dependents]="Yes",'Churn-Dataset'[Churn]="Yes"), CALCULATE(COUNT('Churn-Dataset'[Dependents]), 'Churn-Dataset'[Churn]="Yes"), 0)`
-- % Device Protection = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[DeviceProtection]), 'Churn-Dataset'[DeviceProtection] ="Yes", 'Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('Churn-Dataset'[DeviceProtection]),'Churn-Dataset'[Churn]="Yes"),0)`
+- % Device Protection = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[DeviceProtection]), 'Churn-Dataset'[DeviceProtection] ="Yes", 'Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('Churn-Dataset'[DeviceProtection]),'Churn-                            Dataset'[Churn]="Yes"),0)`
 - % Online Backup = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[OnlineBackup]), 'Churn-Dataset'[OnlineBackup] ="Yes", 'Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('Churn-Dataset'[OnlineBackup]),'Churn-Dataset'[Churn]="Yes"),0)`
 - % Online Security = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[OnlineSecurity]), 'Churn-Dataset'[OnlineSecurity] ="Yes", 'Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('Churn-Dataset'[OnlineSecurity]),'Churn-Dataset'[Churn]="Yes"),0)`
 - % Phone Service = `DIVIDE(CALCULATE(COUNT('Churn-Dataset'[PhoneService]), 'Churn-Dataset'[PhoneService] ="Yes", 'Churn-Dataset'[Churn]="Yes"),CALCULATE(COUNT('Churn-Dataset'[PhoneService]),'Churn-Dataset'[Churn]="Yes"),0)`
