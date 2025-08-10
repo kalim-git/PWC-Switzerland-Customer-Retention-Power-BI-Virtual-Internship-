@@ -79,17 +79,20 @@ Data visualization for the dataset was done in Microsoft Power BI Desktop.
 
 ## Insights
 As shown by Data Visualization, It can be deduced that:
--	Customers on the Two-Year contract, have been with the company for long, while most of the customers on Month-to-Month contract joined the company.
--	The company is at risk of losing recently joined customers. based on the results from analysis.. if they decided to month-to-month contract.
+-	Customers on the Two-Year contract, have been with the company for long, while most of the customers joined the company on Month-to-Month contract basis.
+-	The company is at risk of losing recently joined customers. Specially those customers who decided to subscribe month-to-month contract.
 -	7043 customers are at the risk of churn. and The churn rate is 27% and yearly charges is $16.06M charges. and Monthly Charges is $456.12K monthly charges.
 -	2955 tech tickets were opened and 3632 admin tickets were opened.
 -	Most of the churned customers did not sign up for Online Security and tech support and also did not sign up for Phone Services.
--	It a lot of customers had an issue with Fiber Optic . Up to 42% of the customers churned were using Fiber Optic as their Internet Services.
+-	A lot of customers had an issue with Fiber Optic . Up to 42% of the customers churned were using Fiber Optic as their Internet Services.
+-	If no Tech Support, Device Protection, and Online Security are provided then the chances of customers churning are high.
+-	Tenure and contract play an important role in determining whether the customer will churn. Customers with monthly contracts i.e. lower tenure will switch frequently.
 
 ## Recommendation
--	The Company could try convincing customers to subscribe to One-Year and Two-Year contract. The contract are not favorable to customers as they tend to pay more monthly.
--	Giving the discount to customers based on the some specific tasks is also good wat retaining them, specially those month-to-month contract.
--	From analysis majority customers who churned did not sigh up for Online Security and Tech Support. These are the important services that customers should customers signup for.
+-	The Company could try convincing customers to subscribe to One-Year and Two-Year contract. The short term contracts are not favorable to customers as they tend to pay more monthly.
+-	Provide some offers to the senior citizens as they are stable customers, and offer some discounts on long tenure plans.
+-	Giving the discount to customers based on some specific tasks is a good way to retain them, specially those month-to-month contract.
+-	From analysis majority customers who churned did not sign up for Online Security and Tech Support. These are the important services that customers should signup for.
   The company should educate customers on the benefits of signing up for these services.
 -	Increase sale of 1 and 2 year contract by 5% each and Yearly increase of automatic payments by 5%.
 
